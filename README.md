@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @eshwarprasad01
+- 👋 Hi, I’m Eshwar Prasad
 - 👀 I’m interested in programming
 - 🌱 I’m currently learning python and and almost done with C.
 - 💞️ I’m looking to collaborate on ...
