@@ -89,9 +89,9 @@ int main(){
         print(a);
         winner(a,p1,p2);
         if(turns==9){
-        	printf("\n\n Draw Match.");
-        	break;
-		}
+            printf("\n\n Draw Match.");
+            break;
+	    }
         printf("\n\n %s: ",p2);
         scanf(" %c",&q);
         turns++;
