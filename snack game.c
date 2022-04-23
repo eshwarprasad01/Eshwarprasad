@@ -89,7 +89,5 @@ int main(){
         input();
         game();
     }
-    
-    
 }
 
