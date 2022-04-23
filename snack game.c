@@ -38,7 +38,7 @@ void input(){
     if(kbhit()){  	
         switch(getch()){	
             case 72:	
-				flag=1;
+		flag=1;
                 break;
             case 80:
                 flag=2;
