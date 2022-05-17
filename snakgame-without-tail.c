@@ -32,10 +32,10 @@ void game();			// for implementing logic of the game
 int main(){
 	boundary();
 	snake_x=colomns/2;		// Initializing x and y coordinates...
-    snake_y=rows/2;			// of the snake
-    gotoxy(snake_x,snake_y);
-    printf("0");
-    srand(time(0));		// a library function which generates different random numbers with respect to time in seconds
+    	snake_y=rows/2;			// of the snake
+    	gotoxy(snake_x,snake_y);
+    	printf("0");
+    	srand(time(0));		// a library function which generates different random numbers with respect to time in seconds
 	printfruit();
 	while(1){
 		input();
@@ -58,8 +58,8 @@ void boundary(){
 void printfruit()
 {
 	fruit_x=(rand()%(colomns-2))+1;		// Generating random x , y coordinates...
-    fruit_y=(rand()%(rows-2))+1;		    // for the fruit
-    gotoxy(fruit_x,fruit_y);
+    	fruit_y=(rand()%(rows-2))+1;		    // for the fruit
+    	gotoxy(fruit_x,fruit_y);
 	printf("+");
 	gotoxy(0,0);
 }
@@ -97,7 +97,7 @@ void input(){
     }
 }
 void game(){
-	delay(0.09);	// To contol the speed of the snake
+    delay(0.09);	// To contol the speed of the snake
     switch(key){
         case 1:
         	clearsnake();
