@@ -79,7 +79,7 @@ void input(){
     if(kbhit()){				// kbhit() a library function which returns a non zero value on pressing any key 	
         switch(getch()){	
             case 72:		// up	
-				key=1;
+		key=1;
                 break;
             case 80:		// down
                 key=2;
@@ -101,32 +101,32 @@ void game(){
     switch(key){
         case 1:
         	clearsnake();
-            snake_y--;
-            if(snake_y==0)
-				snake_y=rows-2;		// To generate snake at opposite side of the boundary
-			movesnake();
-            break;
+            	snake_y--;
+            	if(snake_y==0)
+			snake_y=rows-2;		// To generate snake at opposite side of the boundary
+	    	movesnake();
+            	break;
         case 2:
         	clearsnake();
-            snake_y++;
-            if(snake_y==rows-1)
-            	snake_y=1;			// To generate snake at opposite side of the boundary
-            movesnake();
-            break;
+            	snake_y++;
+            	if(snake_y==rows-1)
+            		snake_y=1;			// To generate snake at opposite side of the boundary
+            	movesnake();
+            	break;
         case 3:
         	clearsnake();
         	snake_x--;
         	if(snake_x==0)
         		snake_x=colomns-2;  // To generate snake at opposite side of the boundary
-            movesnake();
-            break;
+            	movesnake();
+            	break;
         case 4:
         	clearsnake();
-            snake_x++;
-            if(snake_x==colomns-1)
-            	snake_x=1;			// To generate snake at opposite side of the boundary
-            movesnake();
-            break;
+            	snake_x++;
+            	if(snake_x==colomns-1)
+            		snake_x=1;			// To generate snake at opposite side of the boundary
+            	movesnake();
+            	break;
     }
     if(snake_x==fruit_x && snake_y==fruit_y){  // if both snake and fruit coordinates becomes equal
         score++;
