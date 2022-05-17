@@ -75,22 +75,6 @@ void printfruit()
 	printf("+");
 	gotoxy(0,0);
 }
-//void createnode(){
-//	struct node*temp=(struct node*)malloc(sizeof(struct node));
-//	temp->next=NULL;
-//	if(head==NULL){
-//		temp->co_x=snake_x;
-//		temp->co_y=snake_y;
-//		head=temp;
-//        tail=temp;
-//	}
-//	else{
-//		temp->co_x=lastnodex;
-//		temp->co_y=lastnodey;
-//		tail->next= temp;
-//		tail=temp;
-//	}
-//}
 void createnode()
 {
 	struct node *temp;
@@ -122,7 +106,7 @@ void input(){
     if(kbhit()){			
         switch(getch()){	
             case 72:	
-				key=1;
+		key=1;
                 break;
             case 80:	
                 key=2;
@@ -148,7 +132,7 @@ void game(){
         case 1:
             b1--;
             if(b1==0)
-				b1=rows-2;	
+		b1=rows-2;	
             break;
         case 2:
             b1++;
@@ -158,7 +142,7 @@ void game(){
         case 3:
         	a1--;
         	if(a1==0)
-        		a1=colomns-2; 
+			a1=colomns-2; 
             break;
         case 4:
             a1++;
@@ -197,7 +181,6 @@ void game(){
 	gotoxy(0,0);
 	
 }
-
 void check(){
 	int win=0;
 	struct node *temp=head->next;
@@ -207,7 +190,6 @@ void check(){
 		temp=temp->next;
 	}
 }
-
 void printsnake(){
 	struct node*temp=head;
 	while(temp){
@@ -219,8 +201,6 @@ void printsnake(){
 		temp=temp->next;
 	}
 }
-
-
 void clearsnake(){
 	struct node*temp=head;
 	while(temp->next!=NULL)
@@ -228,13 +208,6 @@ void clearsnake(){
 	gotoxy(temp->co_x,temp->co_y);
     printf(" ");
 }
-//void movesnake()
-//{
-//	gotoxy(snake_x,snake_y);	
-//	printf("0");
-//	gotoxy(0,0);
-//}
-
 void changecoordinates(int new_x,int new_y){
 	struct node*temp=head;
 	int temp1,temp2;
@@ -250,4 +223,3 @@ void changecoordinates(int new_x,int new_y){
 	lastnodex=temp1;
 	lastnodey=temp2;
 }
-
